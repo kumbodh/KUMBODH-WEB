@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumbodh | Repository Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+        }
+
+        /* Header */
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* Repository Section */
+        .repo-container {
+            padding: 20px;
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        .repo {
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 100%;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        /* Hover Transform */
+        .repo:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 0 15px black;
+        }
+
+        /* Icons */
+        .repo i {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .repo {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kumbodh's Repository</h1>
+    <p>AIML Engineering Student (1st Year)</p>
+</header>
+
+<nav>
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-code"></i> Projects</a>
+    <a href="#"><i class="fas fa-user"></i> About</a>
+</nav>
+
+<section class="repo-container">
+
+    <div class="repo">
+        <h3><i class="fas fa-laptop-code"></i> Web Portfolio</h3>
+        <p>A personal portfolio website using HTML, CSS, JS.</p>
+    </div>
+
+    <div class="repo">
+        <h3><i class="fas fa-robot"></i> AI Chatbot</h3>
+        <p>Basic chatbot using Python and Machine Learning.</p>
+    </div>
+
+    <div class="repo">
+        <h3><i class="fas fa-database"></i> Data Analysis</h3>
+        <p>Data visualization using Python libraries.</p>
+    </div>
+
+    <div class="repo">
+        <h3><i class="fas fa-brain"></i> ML Model</h3>
+        <p>Simple machine learning prediction model.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Kumbodh | AIML Student</p>
+</footer>
+
+</body>
+</html>
