@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kumbodh | HTML5 APIs Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #eef2f3;
+            text-align: center;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 15px;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        /* Drag & Drop */
+        #dragItem {
+            width: 120px;
+            height: 120px;
+            background: orange;
+            line-height: 120px;
+            margin: auto;
+            cursor: grab;
+            border-radius: 10px;
+        }
+
+        #dropZone {
+            width: 250px;
+            height: 250px;
+            border: 3px dashed #333;
+            margin: 20px auto;
+            line-height: 250px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kumbodh - HTML5 APIs</h1>
+    <p>AIML Engineering Student</p>
+</header>
+
+<!-- Drag & Drop -->
+<section>
+    <h2>Drag & Drop Demo</h2>
+
+    <div id="dragItem" draggable="true">Drag Me</div>
+    <div id="dropZone">Drop Here</div>
+</section>
+
+<!-- Geolocation -->
+<section>
+    <h2>Geolocation Demo</h2>
+
+    <button onclick="getLocation()">Get My Location</button>
+    <p id="geoResult"></p>
+</section>
+
+<!-- Web Storage -->
+<section>
+    <h2>Web Storage Demo</h2>
+
+    <input type="text" id="userInput" placeholder="Enter your name">
+    <br>
+    <button onclick="saveData()">Save</button>
+    <button onclick="loadData()">Load</button>
+
+    <p id="storageResult"></p>
+</section>
+
+<script>
+/* Drag & Drop */
+const dragItem = document.getElementById("dragItem");
+const dropZone = document.getElementById("dropZone");
+
+dragItem.addEventListener("dragstart", (e) => {
+    e.dataTransfer.setData("text", "dragItem");
+});
+
+dropZone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+});
+
+dropZone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropZone.innerHTML = "Dropped Successfully!";
+    dropZone.appendChild(dragItem);
+});
+
+/* Geolocation */
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        document.getElementById("geoResult").innerHTML = "Geolocation not supported.";
+    }
+}
+
+function showPosition(position) {
+    document.getElementById("geoResult").innerHTML =
+        "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+    document.getElementById("geoResult").innerHTML =
+        "Error getting location. Please allow permission.";
+}
+
+/* Web Storage */
+function saveData() {
+    let value = document.getElementById("userInput").value;
+    localStorage.setItem("username", value);
+    alert("Data saved successfully!");
+}
+
+function loadData() {
+    let data = localStorage.getItem("username");
+    document.getElementById("storageResult").innerHTML =
+        "Stored Name: " + (data ? data : "No data found");
+}
+</script>
+
+</body>
+</html>
