@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kumbodh | Iframe Demo</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .container {
+            display: flex;
+            height: 80vh;
+        }
+
+        .menu {
+            width: 25%;
+            background: #f4f4f4;
+            padding: 20px;
+            border-right: 2px solid gray;
+        }
+
+        .menu a {
+            display: block;
+            margin: 10px 0;
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            color: blue;
+        }
+
+        .content {
+            width: 75%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kumbodh - Iframe & Frames Demo</h1>
+    <p>AIML Engineering Student</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Resources</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Left Menu (Frame-like navigation) -->
+    <div class="menu">
+        <h3>Menu</h3>
+        <a href="https://www.wikipedia.org" target="frame">Open Wikipedia</a>
+        <a href="https://www.github.com" target="frame">Open GitHub</a>
+        <a href="https://www.google.com/maps" target="frame">Open Maps</a>
+    </div>
+
+    <!-- Right Content Frame -->
+    <div class="content">
+        <iframe name="frame" src="https://www.wikipedia.org"></iframe>
+    </div>
+
+</div>
+
+<!-- Embedded Map -->
+<section style="padding:20px;">
+    <h2>Embedded Map (Pune Location)</h2>
+    <iframe 
+        src="https://www.google.com/maps?q=Pune&output=embed"
+        width="100%" height="300">
+    </iframe>
+</section>
+
+<!-- Embedded External Page -->
+<section style="padding:20px;">
+    <h2>Embedded External Page</h2>
+    <iframe 
+        src="https://example.com"
+        width="100%" height="300">
+    </iframe>
+</section>
+
+<footer>
+    <p>© 2026 Kumbodh | AIML Student</p>
+</footer>
+
+</body>
+</html>
