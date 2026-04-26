@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Elements - Kumbodh</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        article {
+            background: #e3e3e3;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid blue;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Kumbodh</h1>
+    <p>AIML Engineering Student (1st Year)</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+</nav>
+
+<!-- Section -->
+<section>
+    <h2>About HTML5 Semantic Elements</h2>
+
+    <!-- Article 1 -->
+    <article>
+        <h3>Header</h3>
+        <p>The header element represents introductory content like title, logo, or navigation.</p>
+    </article>
+
+    <!-- Article 2 -->
+    <article>
+        <h3>Section</h3>
+        <p>The section element defines a section in a document, grouping related content.</p>
+    </article>
+
+    <!-- Article 3 -->
+    <article>
+        <h3>Article</h3>
+        <p>The article element represents independent, self-contained content.</p>
+    </article>
+
+    <!-- Article 4 -->
+    <article>
+        <h3>Footer</h3>
+        <p>The footer element contains copyright, contact info, or links.</p>
+    </article>
+</section>
+
+<!-- Another Section -->
+<section>
+    <h2>My Learning Journey</h2>
+
+    <article>
+        <p>I am learning HTML, CSS, JavaScript, and AI/ML concepts.</p>
+    </article>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Kumbodh | AIML Student</p>
+</footer>
+
+</body>
+</html>
